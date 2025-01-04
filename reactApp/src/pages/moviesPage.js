@@ -3,6 +3,7 @@ import { getMovies } from "../api/movies-api";
 
 const MoviesPage = () => {
     const { data, error, isLoading, isError } = useQuery('discover', getMovies)
+    console.log(data)
     if (isLoading) {
         return <h1>Loading...</h1>
     }
